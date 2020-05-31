@@ -30,19 +30,12 @@ public class UserMealsUtil {
     public static List<UserMealWithExcess> filteredByCycles(List<UserMeal> meals, LocalTime startTime, LocalTime endTime, int caloriesPerDay) {
         Map<Integer, Integer> map = new HashMap<>();
         List<UserMeal> userMeal = new ArrayList<>();
-        int calories = 0;
         List<UserMealWithExcess> userMealWithExcessList = new ArrayList<>();
 
         for (UserMeal meal : meals) {
             Integer dayOfYear = meal.getDateTime().getDayOfYear();
 
-            if(!map.containsKey(dayOfYear)) {
-                calories = meal.getCalories();
-                map.put(dayOfYear, calories);
-            }
-            else {
-                map.put(dayOfYear, map.get(dayOfYear) + meal.getCalories());
-            }
+            map.merge(dayOfYear, meal.getCalories(), (a, b) -> a +b);
 
             if (TimeUtil.isBetweenHalfOpen(meal.getDateTime().toLocalTime(), startTime, endTime)) {
                 userMeal.add(meal);
@@ -60,10 +53,10 @@ public class UserMealsUtil {
     public static List<UserMealWithExcess> filteredByStreams(List<UserMeal> meals, LocalTime startTime, LocalTime endTime, int caloriesPerDay) {
         Map<Integer, Integer> mapList = meals.stream()
                 .collect(Collectors.groupingBy(userMeal -> userMeal.getDateTime().getDayOfYear(),
-                Collectors.summingInt(userMeal-> userMeal.getCalories())));
+                        Collectors.summingInt(userMeal -> userMeal.getCalories())));
 
         return meals.stream()
-                .filter(userMeal -> TimeUtil.isBetweenHalfOpen(userMeal.getDateTime().toLocalTime(), startTime,endTime))
+                .filter(userMeal -> TimeUtil.isBetweenHalfOpen(userMeal.getDateTime().toLocalTime(), startTime, endTime))
                 .map(userMeal -> new UserMealWithExcess(userMeal.getDateTime(),
                         userMeal.getDescription(),
                         userMeal.getCalories(),
