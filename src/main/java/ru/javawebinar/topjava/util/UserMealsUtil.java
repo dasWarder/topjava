@@ -29,23 +29,18 @@ public class UserMealsUtil {
 
     public static List<UserMealWithExcess> filteredByCycles(List<UserMeal> meals, LocalTime startTime, LocalTime endTime, int caloriesPerDay) {
         Map<Integer, Integer> map = new HashMap<>();
-        List<UserMeal> userMeal = new ArrayList<>();
+
+        meals.forEach(meal -> map.merge(meal.getDateTime().getDayOfYear()
+                , meal.getCalories(), (a, b) -> a + b));
+
         List<UserMealWithExcess> userMealWithExcessList = new ArrayList<>();
-
-        for (UserMeal meal : meals) {
-            Integer dayOfYear = meal.getDateTime().getDayOfYear();
-
-            map.merge(dayOfYear, meal.getCalories(), (a, b) -> a +b);
-
+        
+        meals.forEach(meal ->  {
             if (TimeUtil.isBetweenHalfOpen(meal.getDateTime().toLocalTime(), startTime, endTime)) {
-                userMeal.add(meal);
+                userMealWithExcessList.add(new UserMealWithExcess(meal.getDateTime(), meal.getDescription(), meal.getCalories(),
+                        map.get(meal)>caloriesPerDay));
             }
-        }
-
-        for (UserMeal meal : userMeal) {
-            userMealWithExcessList.add(new UserMealWithExcess(meal.getDateTime(), meal.getDescription(), meal.getCalories(),
-                    map.get(meal.getDateTime().getDayOfYear()) > caloriesPerDay));
-        }
+        });
 
         return userMealWithExcessList;
     }
@@ -53,7 +48,7 @@ public class UserMealsUtil {
     public static List<UserMealWithExcess> filteredByStreams(List<UserMeal> meals, LocalTime startTime, LocalTime endTime, int caloriesPerDay) {
         Map<Integer, Integer> mapList = meals.stream()
                 .collect(Collectors.groupingBy(userMeal -> userMeal.getDateTime().getDayOfYear(),
-                        Collectors.summingInt(userMeal -> userMeal.getCalories())));
+                        Collectors.summingInt(UserMeal::getCalories)));
 
         return meals.stream()
                 .filter(userMeal -> TimeUtil.isBetweenHalfOpen(userMeal.getDateTime().toLocalTime(), startTime, endTime))
