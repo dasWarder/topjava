@@ -1,0 +1,55 @@
+.t1 {
+    width: 75%;
+    margin-right: auto;
+    margin-left: auto;
+    font-family: "Times New Roman";
+    font-size: 14pt;
+    text-align: left;
+    margin-bottom: 5%;
+    background-color: #F2EFEF;
+}
+
+tr.cell>td {
+    padding-bottom: 1em;
+    padding-top: 1em;
+}
+
+.cell:nth-child(even) {background-color: #D7D6D6;}
+
+tr.cell_false>td {
+    padding-bottom: 1em;
+    padding-top: 1em;
+}
+
+tr.descript_tr>th {
+    padding-bottom: 1em;
+    padding-top: 1em;
+}
+
+.cell_false {
+    color: #269F08;
+}
+
+.cell {
+    color: #D70723;
+}
+
+.cell_false:nth-child(even) {background-color: #D7D6D6;}
+
+.descript_tr {
+    background-color: #F2EFEF;
+    font-size: 15pt;
+}
+
+h2 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 10%;
+    font-family: "Times New Roman";
+    margin-bottom: 2%;
+    margin-top: 40px;
+}
+
+body {
+    background-color: #F2EFEF;
+}
