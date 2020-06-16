@@ -1,17 +1,35 @@
 package ru.javawebinar.topjava.model;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 
-public class Meal {
+
+public class Meal extends AbstractBaseEntity {
+
     private final LocalDateTime dateTime;
 
     private final String description;
 
     private final int calories;
 
+    private int userId;
+
+
+
+
+    public Meal(Integer id, LocalDateTime dateTime, String description, int calories) {
+        super(id);
+        this.dateTime = dateTime;
+        this.description = description;
+        this.calories = calories;
+    }
+
     public Meal(LocalDateTime dateTime, String description, int calories) {
+        super(null);
         this.dateTime = dateTime;
         this.description = description;
         this.calories = calories;
@@ -36,4 +54,17 @@ public class Meal {
     public LocalTime getTime() {
         return dateTime.toLocalTime();
     }
+
+    public int getUserId() {
+        return userId;
+    }
+
+    public void setUserId(int userId) {
+        this.userId = userId;
+    }
+
+    public boolean isNew() {
+        return id == null;
+    }
+
 }
