@@ -2,6 +2,7 @@ package ru.javawebinar.topjava.repository.inmemory;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import ru.javawebinar.topjava.model.Meal;
 import ru.javawebinar.topjava.repository.MealRepository;
@@ -17,7 +18,8 @@ import java.util.concurrent.atomic.AtomicInteger;
 @Repository
 public class InMemoryMealRepository implements MealRepository {
 
-    private static final Logger log = LoggerFactory.getLogger(MealServlet.class);
+    private static final Logger log = LoggerFactory.getLogger(InMemoryMealRepository.class);
+
     private Map<Integer, Meal> userMealMap = new ConcurrentHashMap<>();
     private AtomicInteger  id = new AtomicInteger(1);
 
@@ -73,7 +75,7 @@ public class InMemoryMealRepository implements MealRepository {
 
     @Override
     public Meal update(Meal meal, int id, int authUserId) {
-        log.info("update", id, meal);
+        log.info("update",meal);
         Meal mealFromMap = userMealMap.get(id);
         if (mealFromMap.getUserId() == authUserId) {
             if (mealFromMap != null) {
