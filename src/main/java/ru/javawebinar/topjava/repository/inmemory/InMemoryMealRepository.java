@@ -1,9 +1,11 @@
 package ru.javawebinar.topjava.repository.inmemory;
 
+import org.graalvm.util.CollectionsUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
+import org.springframework.util.CollectionUtils;
 import ru.javawebinar.topjava.model.Meal;
 import ru.javawebinar.topjava.repository.MealRepository;
 
@@ -13,6 +15,7 @@ import ru.javawebinar.topjava.web.MealServlet;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.atomic.AtomicInteger;
+import java.util.stream.Collectors;
 
 
 @Repository
@@ -27,7 +30,7 @@ public class InMemoryMealRepository implements MealRepository {
     @Override
     public Meal save(Meal meal, int authUserId) {
         log.info("save", meal);
-        if (meal != null) {
+        if (meal.isNew()) {
             meal.setUserId(authUserId);
             saveToList(meal);
             return meal;
@@ -61,16 +64,13 @@ public class InMemoryMealRepository implements MealRepository {
     @Override
     public List<Meal> getAll(int authUserId) {
         log.info("getAll");
-        List<Meal> mealList = new ArrayList<>();
-        for(Map.Entry<Integer, Meal> map : userMealMap.entrySet()) {
-            if (Integer.valueOf(map.getValue().getUserId()) == authUserId) {
-                mealList.add(map.getValue());
-            }
-        }
-
-        Collections.sort(mealList, (o1, o2) -> - o1.getDate().compareTo(o2.getDate()));
-
-        return mealList;
+        return CollectionUtils.isEmpty(userMealMap) ? Collections.emptyList() :
+                userMealMap
+                        .values()
+                        .stream()
+                        .sorted(Comparator.comparing(Meal::getDateTime)
+                                .reversed())
+                        .collect(Collectors.toList());
     }
 
     @Override
@@ -91,8 +91,9 @@ public class InMemoryMealRepository implements MealRepository {
     public Meal saveToList(Meal meal) {
         if (meal.isNew()){
             meal.setId(id.getAndIncrement());
+            return userMealMap.put(meal.getId(), meal);
         }
-        return userMealMap.put(meal.getId(), meal);
+        return userMealMap.computeIfPresent(meal.getId(), (userId, oldmeal) -> meal);
 
     }
 }

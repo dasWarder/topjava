@@ -37,7 +37,7 @@ public class InMemoryUserRepository implements UserRepository {
             listOfUsers.put(user.getId(), user);
             return user;
         }
-        return null;
+        return listOfUsers.computeIfPresent(user.getId(), (id, oldUser) -> user);
     }
 
     @Override
@@ -53,31 +53,19 @@ public class InMemoryUserRepository implements UserRepository {
     @Override
     public List<User> getAll() {
         log.info("getAll");
-        List<User> listOf = new ArrayList<>();
-
-        for (Map.Entry<Integer, User> map : listOfUsers.entrySet()) {
-            listOf.add(map.getValue());
-        }
-
-        Collections.sort(listOf, new Comparator<User>() {
-            @Override
-            public int compare(User o1, User o2) {
-                return o1.getName().compareTo(o2.getName());
-            }
-        });
-
-        return listOf;
+        return listOfUsers.values()
+                .stream()
+                .sorted(Comparator.comparing(User::getName)
+                .thenComparing(User::getEmail))
+                .collect(Collectors.toList());
     }
 
     @Override
     public User getByEmail(String email) {
         log.info("getByEmail {}", email);
-        User resUser= null;
-        for(Map.Entry<Integer, User> map : listOfUsers.entrySet()) {
-            if ((resUser = map.getValue()).getEmail().equals(email)) {
-                return resUser;
-            }
-        }
-        return null;
+        return getAll().stream()
+                .filter(usert-> usert.getEmail().equals(email))
+                .findFirst()
+                .orElse(null);
     }
 }
