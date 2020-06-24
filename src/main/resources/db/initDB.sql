@@ -33,7 +33,7 @@ CREATE TABLE meals
 (
     id              INTEGER PRIMARY KEY DEFAULT nextval('global_seq_meal'),
     id_user         INTEGER     NOT NULL,
-    date_time       TIMESTAMP WITH TIME ZONE DEFAULT now() NOT NULL,
+    date_time       TIMESTAMP WITH TIME ZONE  NOT NULL,
     description     VARCHAR     NOT NULL,
     calories        INTEGER     NOT NULL,
 
