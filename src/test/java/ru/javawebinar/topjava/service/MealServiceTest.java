@@ -24,6 +24,8 @@ import static ru.javawebinar.topjava.MealTestData.*;
 import static ru.javawebinar.topjava.MealTestData.USER_ID;
 import static ru.javawebinar.topjava.MealTestData.*;
 import static ru.javawebinar.topjava.MealTestData.assertMatch;
+import static ru.javawebinar.topjava.UserTestData.NOT_FOUND;
+import static ru.javawebinar.topjava.UserTestData.getNew;
 import static ru.javawebinar.topjava.model.AbstractBaseEntity.START_SEQ;
 
 
@@ -76,5 +78,28 @@ public class MealServiceTest {
 
     @Test
     public void create() {
+        Meal newMeal = getMeal();
+        Meal created = service.create(newMeal, USER_ID);
+        Integer newId = created.getId();
+        newMeal.setId(newId);
+        MealTestData.assertMatch(created, newMeal);
+        MealTestData.assertMatch(service.get(newId, USER_ID), newMeal);
+    }
+
+    @Test
+    public void getNotFound() throws Exception {
+        assertThrows(NotFoundException.class, () -> service.get(3, USER_ID));
+    }
+
+    @Test
+    public void deleteNotFound() throws Exception {
+        assertThrows(NotFoundException.class, () -> service.delete(3, USER_ID));
+    }
+
+    @Test
+    public void updateNotFound() throws Exception {
+        Meal updated = getUpdatedMeal();
+        service.update(updated, USER_ID);
+        assertThrows(NotFoundException.class, () -> service.get(MEAL_ID, ADMIN_ID));
     }
 }

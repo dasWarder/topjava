@@ -39,4 +39,8 @@ public class MealTestData {
         updated.setDateTime(LocalDateTime.of(2020, 12, 10, 12, 44));
         return updated;
     }
+
+    public static Meal getMeal() {
+        return new Meal(null, LocalDateTime.of(2020, 5, 12, 12, 44), "newMeal", 670);
+    }
 }
