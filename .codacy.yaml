@@ -1,0 +1,46 @@
+engines:
+  rubocop:
+    exclude_paths:
+      - config/engines.yml
+  duplication:
+    exclude_paths:
+      - config/engines.yml
+  metric:
+    exclude_paths:
+      - config/engines.yml
+  coverage:
+    exclude_paths:
+      - config/engines.yml
+languages:
+  css:
+    extensions:
+      - '-css.resource'
+exclude_paths:
+  - '.*[\.-]min\.css'
+  - '.*[\.-]min\.js'
+  - '.*node_modules/.*'
+  - '.*bower_components'
+  - '.*vendor/.*'
+  - '.*third[_-]?[Pp]arty'
+  - '.*docs?/.*'
+  - '.*samples'
+  - '.*releases?/.*'
+  - '.*builds'
+  - '.*dist/.*'
+  - '.*external'
+  - '.*libs/.*'
+  - '.*d3\.js'
+  - '.*angular(-resource|)?\.js'
+  - '.*select2(-resource|)?\.js'
+  - '.*-ace\.js'
+  - '.*typeahead\.js'
+  - '.*jquery-ui\.js'
+  - '.*reveal\.js'
+  - '.*three\.js'
+  - '.*chart\.js'
+  - '.*jquery\.js'
+  - '.*underscore\.js'
+  - '.*lodash\.js'
+  - '.*bootstrap\.js'
+  - '.*bootstrap\.css'
+  - '.*font-awesome\.css'
