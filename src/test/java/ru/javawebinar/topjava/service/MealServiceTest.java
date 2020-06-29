@@ -1,6 +1,14 @@
 package ru.javawebinar.topjava.service;
 
+import org.junit.AfterClass;
+import org.junit.ClassRule;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.ExternalResource;
+import org.junit.rules.TestName;
+import org.junit.rules.TestRule;
+import org.junit.rules.TestWatcher;
+import org.junit.runner.Description;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
@@ -11,6 +19,7 @@ import ru.javawebinar.topjava.model.Meal;
 import ru.javawebinar.topjava.util.exception.NotFoundException;
 
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.time.Month;
 
 import static org.junit.Assert.assertThrows;
@@ -26,8 +35,42 @@ import static ru.javawebinar.topjava.UserTestData.USER_ID;
 @Sql(scripts = "classpath:db/populateDB.sql", config = @SqlConfig(encoding = "UTF-8"))
 public class MealServiceTest {
 
+    private static StringBuilder builder = new StringBuilder();
+
     @Autowired
     private MealService service;
+
+    @Rule
+    public final TestRule watchman = new TestName() {
+        private LocalTime start = null;
+        private LocalTime end = null;
+        private String name = null;
+
+
+        @Override
+        protected void starting(Description description) {
+            start  = LocalTime.now();
+            name = description.getMethodName();
+        }
+
+        @Override
+        protected void finished(Description description) {
+            end = LocalTime.now();
+            long result = end.getNano() - start.getNano();
+            builder.append("Test name: " + name
+                    + ". Runtime is "
+                    + result
+                    + " nanoseconds" + "\n");
+        }
+    };
+
+    @ClassRule
+    public static final ExternalResource resource = new ExternalResource() {
+        @Override
+        protected void after() {
+            System.out.println(builder.toString());
+        }
+    };
 
     @Test
     public void delete() throws Exception {
