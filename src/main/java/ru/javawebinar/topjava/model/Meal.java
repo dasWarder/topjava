@@ -1,29 +1,57 @@
 package ru.javawebinar.topjava.model;
 
-import javax.persistence.FetchType;
-import javax.persistence.ManyToOne;
+import org.hibernate.annotations.Proxy;
+import org.hibernate.validator.constraints.Range;
+
+import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 
+
+@NamedQueries({
+        @NamedQuery(name = Meal.DELETE_MEAL, query = "DELETE FROM Meal m WHERE m.user.id =:user_id AND m.id=:id"),
+        @NamedQuery(name = Meal.ALL_SORTED, query = "SELECT m FROM Meal m LEFT JOIN FETCH m.user WHERE m.user.id=:user_id ORDER BY m.dateTime DESC"),
+        @NamedQuery(name = Meal.ALL_BETWEEN, query = "SELECT m FROM Meal m LEFT JOIN FETCH m.user WHERE m.user.id=: user_id AND m.dateTime >= :startDateTime AND m.dateTime < :endDateTime ORDER BY m.dateTime DESC"),
+})
+@Entity
+@Table(name="meals", uniqueConstraints = {@UniqueConstraint(columnNames = {"date_time"} , name = "meals_unique_user_datetime_idx")})
 public class Meal extends AbstractBaseEntity {
+
+    public static final String DELETE_MEAL = "Meal.delete";
+    public static final String ALL_SORTED = "Meal.getAllSorted";
+    public static final String ALL_BETWEEN = "Meal.getBetween";
+
+    @Column(name = "date_time", nullable = false, columnDefinition = "timestamp")
+    @NotNull
     private LocalDateTime dateTime;
 
+    @Column(name = "description", nullable = false, columnDefinition = "description of meal")
+    @NotBlank
+    @Size(min = 1)
     private String description;
 
+    @Column(name = "calories", nullable = false, columnDefinition = "number of calories")
+    @NotNull
+    @Range(min = 1, max = 10000)
     private int calories;
 
+
     @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
     public Meal() {
     }
 
-    public Meal(LocalDateTime dateTime, String description, int calories) {
+    public Meal(@NotNull LocalDateTime dateTime, @NotNull String description, @NotNull int calories) {
         this(null, dateTime, description, calories);
     }
 
-    public Meal(Integer id, LocalDateTime dateTime, String description, int calories) {
+    public Meal(@NotNull Integer id, @NotNull LocalDateTime dateTime, @NotNull String description, @NotNull int calories) {
         super(id);
         this.dateTime = dateTime;
         this.description = description;
