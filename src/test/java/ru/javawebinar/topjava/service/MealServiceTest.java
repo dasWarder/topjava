@@ -10,6 +10,7 @@ import org.junit.rules.TestRule;
 import org.junit.rules.TestWatcher;
 import org.junit.runner.Description;
 import org.junit.runner.RunWith;
+import org.slf4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.jdbc.Sql;
@@ -23,6 +24,7 @@ import java.time.LocalTime;
 import java.time.Month;
 
 import static org.junit.Assert.assertThrows;
+import static org.slf4j.LoggerFactory.getLogger;
 import static ru.javawebinar.topjava.MealTestData.*;
 import static ru.javawebinar.topjava.UserTestData.ADMIN_ID;
 import static ru.javawebinar.topjava.UserTestData.USER_ID;
@@ -34,6 +36,7 @@ import static ru.javawebinar.topjava.UserTestData.USER_ID;
 @RunWith(SpringRunner.class)
 @Sql(scripts = "classpath:db/populateDB.sql", config = @SqlConfig(encoding = "UTF-8"))
 public class MealServiceTest {
+    private static final Logger log = getLogger(MealService.class);
 
     private static StringBuilder builder = new StringBuilder();
 
@@ -57,10 +60,12 @@ public class MealServiceTest {
         protected void finished(Description description) {
             end = LocalTime.now();
             long result = end.getNano() - start.getNano();
-            builder.append("Test name: " + name
+            String resultStr = "Test name: " + name
                     + ". Runtime is "
                     + result
-                    + " nanoseconds" + "\n");
+                    + " nanoseconds" + "\n";
+            builder.append(resultStr);
+            log.info(resultStr);
         }
     };
 
@@ -68,7 +73,11 @@ public class MealServiceTest {
     public static final ExternalResource resource = new ExternalResource() {
         @Override
         protected void after() {
-            System.out.println(builder.toString());
+            log.info("\n__________________" +
+                    "\nTest" +
+                    "\n___________________" +
+                    "\n" + builder +
+                    "\n_______________________");
         }
     };
 
