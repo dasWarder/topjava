@@ -27,9 +27,5 @@ public class Profiles {
         }
     }
 
-    public static String getActiveImplProfile() {
-        return REPOSITORY_IMPLEMENTATION;
-    }
-
 
 }

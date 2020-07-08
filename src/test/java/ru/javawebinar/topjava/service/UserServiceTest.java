@@ -11,6 +11,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.jdbc.Sql;
 import org.springframework.test.context.jdbc.SqlConfig;
 import org.springframework.test.context.junit4.SpringRunner;
+import org.springframework.transaction.annotation.Transactional;
 import ru.javawebinar.topjava.ActiveDbProfileResolver;
 import ru.javawebinar.topjava.model.Role;
 import ru.javawebinar.topjava.model.User;
@@ -21,14 +22,8 @@ import java.util.List;
 import static org.junit.Assert.assertThrows;
 import static ru.javawebinar.topjava.UserTestData.*;
 
-@ContextConfiguration({
-        "classpath:spring/spring-app.xml",
-        "classpath:spring/spring-db.xml"
-})
-@RunWith(SpringRunner.class)
-@Sql(scripts = "classpath:db/populateDB.sql", config = @SqlConfig(encoding = "UTF-8"))
-@ActiveProfiles(resolver = ActiveDbProfileResolver.class)
-public class UserServiceTest {
+
+public abstract class UserServiceTest extends AbstractBaseServiceTest {
 
     @Autowired
     private UserService service;
@@ -64,7 +59,7 @@ public class UserServiceTest {
     }
 
     @Test
-    public void deletedNotFound() throws Exception {
+    public void deleteNotFound() throws Exception {
         assertThrows(NotFoundException.class, () -> service.delete(NOT_FOUND));
     }
 

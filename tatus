@@ -1,0 +1,443 @@
+[33mcommit 01b1d209789ba6791eefac0154cbed33bd78f748[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: Andrey Babichev <Al.94_94@mail.ru>
+Date:   Tue Jul 7 14:34:48 2020 +0300
+
+    Lesson 5, 5_8
+
+[33mcommit 1259518d578dea1b1011d26d570ec1331fbd0a23[m
+Author: Andrey Babichev <Al.94_94@mail.ru>
+Date:   Tue Jul 7 14:34:13 2020 +0300
+
+    Lesson 5, 5_7
+
+[33mcommit 272402722184ef74773d4971e9fd19faca1bb93e[m
+Author: Andrey Babichev <Al.94_94@mail.ru>
+Date:   Tue Jul 7 14:29:44 2020 +0300
+
+    Lesson 5, 5_6
+
+[33mcommit 3de17984c8e438f1baa77bd752ef09d35188c02f[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Andrey Babichev <Al.94_94@mail.ru>
+Date:   Tue Jul 7 14:28:05 2020 +0300
+
+    Lesson 5, 5_5
+
+[33mcommit 74ef89d8fbb733f661be7fd5f6cb589a4549620e[m
+Author: Andrey Babichev <Al.94_94@mail.ru>
+Date:   Tue Jul 7 14:04:17 2020 +0300
+
+    Lesson 5, 5_4
+
+[33mcommit 25fa3b0ccb7aa70cb7814abd413e6edd0fd63419[m
+Author: Andrey Babichev <Al.94_94@mail.ru>
+Date:   Tue Jul 7 14:04:00 2020 +0300
+
+    Lesson 5, 5_3
+
+[33mcommit d05d2744c336c62a3b80499ccdd3ab206af1a0d3[m
+Author: Andrey Babichev <Al.94_94@mail.ru>
+Date:   Tue Jul 7 14:03:31 2020 +0300
+
+    Lesson 5, 5_2
+
+[33mcommit 980d559d75840ff18a939b2ac04a4e236b887173[m
+Author: Andrey Babichev <Al.94_94@mail.ru>
+Date:   Tue Jul 7 14:03:05 2020 +0300
+
+    Lesson 5, 5_1
+
+[33mcommit 8e84d8f9180e95f95c2d133abc7799e897a51983[m
+Author: Andrey Babichev <Al.94_94@mail.ru>
+Date:   Sun Jun 28 13:34:56 2020 +0300
+
+    Lesson 4, apply patch 4_10
+
+[33mcommit 93176b20177a34fb15e0cd15cf66d2a39a2ab347[m
+Author: Andrey Babichev <Al.94_94@mail.ru>
+Date:   Sun Jun 28 13:33:19 2020 +0300
+
+    Lesson 4, apply patch 4_9
+
+[33mcommit 90ab624d44b7340ad6fa94061fdb072ce919d298[m
+Author: Andrey Babichev <Al.94_94@mail.ru>
+Date:   Sun Jun 28 13:15:42 2020 +0300
+
+    Lesson 3, apply patch 4_8
+
+[33mcommit 8c3ed0d686be37365e1fb1e42a4dddf58370f2ba[m
+Author: Andrey Babichev <Al.94_94@mail.ru>
+Date:   Sun Jun 28 13:06:31 2020 +0300
+
+    Lesson 4 apply patch 4_7
+
+[33mcommit 7a616eee430c7f2f5686a1737d333274980a284b[m
+Author: Andrey Babichev <Al.94_94@mail.ru>
+Date:   Sun Jun 28 12:55:32 2020 +0300
+
+    Lesson 4, apply patch 4_6
+
+[33mcommit 797b991c3776cfd2c8777d1c9c134d39ec549187[m
+Author: Andrey Babichev <Al.94_94@mail.ru>
+Date:   Sun Jun 28 12:51:54 2020 +0300
+
+    Lesson 4, apply patch 4_5
+
+[33mcommit bb1d4ccbfb8a10ee9cf183c91eeb1009bb327e35[m
+Author: Andrey Babichev <Al.94_94@mail.ru>
+Date:   Sun Jun 28 12:47:55 2020 +0300
+
+    Add codacy config
+
+[33mcommit c1e1cbf5b407d7ede622000e8b0ddda72f6ffa34[m
+Author: Andrey Babichev <Al.94_94@mail.ru>
+Date:   Sun Jun 28 06:50:23 2020 +0300
+
+    Lesson 4, apply patch 4_4
+
+[33mcommit 4bfa3ae071c1a7c566d64d81ba5f12c4cd3912bb[m
+Author: Andrey Babichev <Al.94_94@mail.ru>
+Date:   Sun Jun 28 06:49:49 2020 +0300
+
+    Lesson 4, apply patch 4_3
+
+[33mcommit 4002044c763c8988a929e75f35d37d1b8f0595a8[m
+Author: Andrey Babichev <Al.94_94@mail.ru>
+Date:   Sun Jun 28 06:46:38 2020 +0300
+
+    Lesson 4, apply patch 4_2
+
+[33mcommit 830bec76906a552b4bb9d348b7606b8e50a667b9[m
+Author: Andrey Babichev <Al.94_94@mail.ru>
+Date:   Sun Jun 28 06:40:26 2020 +0300
+
+    Lesson 4, apply patch 4_1
+
+[33mcommit 7e91beb7e6fb22713ab3ebdf5717bc7a1fb1b332[m
+Author: Andrey Babichev <Al.94_94@mail.ru>
+Date:   Thu Jun 25 09:50:33 2020 +0300
+
+    Lesson 4, apply patch 4.0
+
+[33mcommit bf76cc303d61657e1f380f5f107f5c86c7c4e756[m
+Author: Andrey Babichev <Al.94_94@mail.ru>
+Date:   Tue Jun 23 13:45:46 2020 +0300
+
+    Lesson 3, apply patch 3_15
+
+[33mcommit b4beca3eb6253b39d7f4beb3287e6a006f74b8fa[m
+Author: Andrey Babichev <Al.94_94@mail.ru>
+Date:   Tue Jun 23 13:44:11 2020 +0300
+
+    Lesson 3, apply patch 3_14 test_logging
+
+[33mcommit 1e4481368256329fe3153d17697ff94c2369fc2f[m
+Author: Andrey Babichev <Al.94_94@mail.ru>
+Date:   Tue Jun 23 13:40:51 2020 +0300
+
+    Lesson 3, apply patch 3_13 UserService
+
+[33mcommit 26d749dcd73bcdf01a0a2f8fccb4688263ea766b[m
+Author: Andrey Babichev <Al.94_94@mail.ru>
+Date:   Mon Jun 22 22:27:59 2020 +0300
+
+    Lesson 3, apply patch 2_12 implementation
+
+[33mcommit ad1d85635a077c178df24c519dbe9098e70150cb[m
+Author: Andrey Babichev <Al.94_94@mail.ru>
+Date:   Mon Jun 22 16:24:11 2020 +0300
+
+    Lesson 3, apply patch 3_11 add postgres
+
+[33mcommit 6b5535b76298a8fb5d147a2f67bc28aaba673ef0[m
+Author: Andrey Babichev <Al.94_94@mail.ru>
+Date:   Mon Jun 22 15:04:32 2020 +0300
+
+    Lesson 3, apply patch 3_10
+
+[33mcommit c44fa68eaf9a26fca4157183c213f18f39994597[m
+Author: Andrey Babichev <Al.94_94@mail.ru>
+Date:   Mon Jun 22 15:00:41 2020 +0300
+
+    Patch changes
+
+[33mcommit e5963fc5fff7372f6f6ad3d60aa145327e535063[m
+Author: Andrey Babichev <Al.94_94@mail.ru>
+Date:   Mon Jun 22 14:45:06 2020 +0300
+
+    Lesson 3. Apply patch 3_09
+
+[33mcommit b200a2acb27ba530a2a53648fdf852c1f7602931[m
+Author: Andrey Babichev <Al.94_94@mail.ru>
+Date:   Mon Jun 22 14:37:39 2020 +0300
+
+    Lesson 3. Apply patch 3_08
+
+[33mcommit ca2673f8ce6a24d82b954e7c5dc6931564ccbba9[m
+Author: Andrey Babichev <Al.94_94@mail.ru>
+Date:   Thu Jun 18 11:36:51 2020 +0300
+
+    Lesson 3, apply 3_07
+
+[33mcommit df6b0cc2dddb929ce5806d8ac3a5cffe201dcce5[m
+Author: Andrey Babichev <Al.94_94@mail.ru>
+Date:   Thu Jun 18 11:36:25 2020 +0300
+
+    Lesson 3, apply 3_06
+
+[33mcommit e7a91e19c9dd2df82f1c9d07cafdd8003b0b8b79[m
+Author: Andrey Babichev <Al.94_94@mail.ru>
+Date:   Thu Jun 18 11:34:53 2020 +0300
+
+    Lesson 3, apply 3_05
+
+[33mcommit 42a288a365789bb114157fd39d4f155fb5f8f708[m
+Author: Andrey Babichev <Al.94_94@mail.ru>
+Date:   Thu Jun 18 11:34:23 2020 +0300
+
+    Lesson 3, apply 3_04
+
+[33mcommit 003cd8a1aebd509af6f686eabfd232c21528cf36[m
+Author: Andrey Babichev <Al.94_94@mail.ru>
+Date:   Thu Jun 18 11:32:04 2020 +0300
+
+    Lesson 3, apply 3_03
+
+[33mcommit 3d9c8dd982c942bfdc34c85917308f59d07b7940[m
+Author: Andrey Babichev <Al.94_94@mail.ru>
+Date:   Thu Jun 18 11:31:39 2020 +0300
+
+    Lesson 3, apply 3_02
+
+[33mcommit 3ea69238ebd70b077669a96eb7c0b7b9560e347b[m
+Author: Andrey Babichev <Al.94_94@mail.ru>
+Date:   Thu Jun 18 11:31:02 2020 +0300
+
+    Lesson 3, apply 3_01
+
+[33mcommit 991579fb16e5d6e0f2c905b6f5d066b2e622292a[m
+Author: Andrey Babichev <Al.94_94@mail.ru>
+Date:   Thu Jun 18 11:30:29 2020 +0300
+
+    Lesson 2, apply 2_7
+
+[33mcommit f17e5b19b73f9b0078de0bfb8d4e8c701a1f51cf[m
+Author: Andrey Babichev <Al.94_94@mail.ru>
+Date:   Thu Jun 18 11:30:07 2020 +0300
+
+    Lesson 2, apply 2_6
+
+[33mcommit 066cb18d00d25740aa70637a3e5b47993404d48f[m
+Author: Andrey Babichev <Al.94_94@mail.ru>
+Date:   Thu Jun 18 11:29:38 2020 +0300
+
+    Lesson 2, apply 2_5
+
+[33mcommit 295e196c80de7d2187d6267aab47aa1c7c834f47[m
+Author: Andrey Babichev <Al.94_94@mail.ru>
+Date:   Thu Jun 18 11:29:11 2020 +0300
+
+    Lesson 2, apply 2_4
+
+[33mcommit eaf3890335fbe3ac1221cb4337eee5029d07ff61[m
+Author: Andrey Babichev <Al.94_94@mail.ru>
+Date:   Thu Jun 18 11:28:47 2020 +0300
+
+    Lesson 2, apply 2_3
+
+[33mcommit 208d7d0f7546b0e35e5b6efc2d3576bd4bf94872[m
+Author: Andrey Babichev <Al.94_94@mail.ru>
+Date:   Thu Jun 18 11:28:21 2020 +0300
+
+    Lesson 2, apply 2_2
+
+[33mcommit 82ebbb4dce794ca44a026aaeaa6864cf4b34769e[m
+Author: Andrey Babichev <Al.94_94@mail.ru>
+Date:   Thu Jun 11 18:42:35 2020 +0300
+
+    Lesson 2, patch 2_1 HW1
+
+[33mcommit 53a65bbe005e6ed9445fa5761f94a8db5c916619[m[33m ([m[1;32morigin[m[33m)[m
+Author: Andrey Babichev <Al.94_94@mail.ru>
+Date:   Sat Jun 6 22:33:41 2020 +0300
+
+    Apply Lesson 1, patch 1_5 logging
+
+[33mcommit 3399e3663976d45f817120d448a15e1bbe0b229d[m
+Author: Andrey Babichev <Al.94_94@mail.ru>
+Date:   Fri Jun 5 16:25:50 2020 +0300
+
+    Apply Lesson 1, patch 1_4 create servlet Class
+
+[33mcommit 2c795455150fdcc944743f70055fbe26a566acff[m
+Author: Andrey Babichev <Al.94_94@mail.ru>
+Date:   Fri Jun 5 16:03:19 2020 +0300
+
+    Apply Lesson 1, patch 1_3 web and dependencies
+
+[33mcommit 9701df0dc7f6737a40acafca54c5cd92d35c530a[m
+Author: Andrey Babichev <Al.94_94@mail.ru>
+Date:   Fri Jun 5 15:53:59 2020 +0300
+
+    Add Lesson 1, patch 1_2 switch to war
+
+[33mcommit f88d26310897bd2a4ff0e02a1258a3528090d4dc[m
+Author: Andrey Babichev <Al.94_94@mail.ru>
+Date:   Thu Jun 4 17:06:12 2020 +0300
+
+    Lesson 1 Patch 1_1
+
+[33mcommit e22544cfa8b2788a3ff445d387e4f81cde65d1ba[m
+Author: Andrey Babichev <Al.94_94@mail.ru>
+Date:   Thu Jun 4 17:03:05 2020 +0300
+
+    Lesson 1, Patch 1.0 apply
+
+[33mcommit 4eb670c543a80db2b0b8d6640f8d6ab83ab5b1cd[m
+Author: Andrey Babichev <Al.94_94@mail.ru>
+Date:   Fri May 29 18:28:00 2020 +0300
+
+    Commit path1
+
+[33mcommit 8f2c0376054663ce5c73dcbb68a7a2d3cdab6298[m
+Author: JavaOPs <admin@javaops.ru>
+Date:   Thu May 28 11:32:08 2020 +0300
+
+    Update graduate
+
+[33mcommit 6464f3cab8aa6fdfd9732d83ee15e972dc9809b7[m
+Author: Java Online Projects <admin@javaops.ru>
+Date:   Wed May 27 16:02:09 2020 +0300
+
+    Update README.md
+
+[33mcommit 7d0145036d3e3e1c69fd053cb6195379aaf9c9ff[m
+Author: Java Online Projects <admin@javaops.ru>
+Date:   Wed May 27 13:45:01 2020 +0300
+
+    Update README.md
+
+[33mcommit c7a9d42c53c720477944de607b83e722ef3fb750[m
+Author: Java Online Projects <admin@javaops.ru>
+Date:   Sun May 24 13:37:51 2020 +0300
+
+    Update graduation.md
+
+[33mcommit 628eb10dea9635fd23acb08b6477f897d14426d8[m
+Author: Java Online Projects <admin@javaops.ru>
+Date:   Sun May 24 13:32:50 2020 +0300
+
+    Update graduation.md
+
+[33mcommit efd86a06ca26f316d5a38a58de6b887789c7cd36[m
+Author: Java Online Projects <admin@javaops.ru>
+Date:   Sun May 24 01:00:39 2020 +0300
+
+    Update README.md
+
+[33mcommit 7eb4a67c93f47950a420d561b7de6956c1a9eb1b[m
+Author: Java Online Projects <admin@javaops.ru>
+Date:   Sat May 23 19:10:30 2020 +0300
+
+    Update README.md
+
+[33mcommit ba240e81eca53c90ca40ec4bfa771393bc8ef71e[m
+Author: Java Online Projects <admin@javaops.ru>
+Date:   Wed May 20 22:16:40 2020 +0300
+
+    Update README.md
+
+[33mcommit 18f0374c537cd28f46b4e1db8f98fc5088f8ac9a[m
+Author: Java Online Projects <admin@javaops.ru>
+Date:   Tue May 19 11:47:22 2020 +0300
+
+    Update README.md
+
+[33mcommit 3b91874e6df53a7d7fcebb7efa8fc0bf40ad2be9[m
+Author: Java Online Projects <admin@javaops.ru>
+Date:   Tue May 19 11:46:05 2020 +0300
+
+    Update README.md
+
+[33mcommit f0bff4f8b63ab34f44a8997cbbb21fce0583eca0[m
+Author: Java Online Projects <admin@javaops.ru>
+Date:   Tue May 19 11:45:35 2020 +0300
+
+    Update README.md
+
+[33mcommit c2180201f5095afdaf632c3e71681acf44d56014[m
+Author: Java Online Projects <admin@javaops.ru>
+Date:   Tue May 19 11:43:39 2020 +0300
+
+    Update README.md
+
+[33mcommit 5fe982c3fa982a20b6d31aee74dfc15bfff8ab62[m
+Author: Java Online Projects <admin@javaops.ru>
+Date:   Sun May 17 23:21:23 2020 +0300
+
+    Update README.md
+
+[33mcommit 54f4ec0d6363ef814f3001f831b484dff60f3a7b[m
+Author: Java Online Projects <admin@javaops.ru>
+Date:   Wed May 13 22:05:03 2020 +0300
+
+    Update cv.md
+
+[33mcommit 7c31a8ee0c7a6f87064a23a6d69f8b053a4b1cbf[m
+Author: Java Online Projects <admin@javaops.ru>
+Date:   Wed May 13 22:04:00 2020 +0300
+
+    Update cv.md
+
+[33mcommit 052adf67944cf47671f94293014fbcfce7caa270[m
+Author: Java Online Projects <admin@javaops.ru>
+Date:   Wed May 13 22:03:35 2020 +0300
+
+    Update cv.md
+
+[33mcommit 3449156db3deb9fb8cb0d4c8d9bd5e8809729304[m
+Author: Java Online Projects <admin@javaops.ru>
+Date:   Sun May 10 23:26:52 2020 +0300
+
+    Update README.md
+
+[33mcommit 2620c6f93e413d51271a5398e8545f3569036638[m
+Author: Java Online Projects <admin@javaops.ru>
+Date:   Sun May 10 23:16:00 2020 +0300
+
+    Update README.md
+
+[33mcommit bee6ffcbffc764b82c1abd2fb4f6ff1087faa0a1[m
+Author: Java Online Projects <admin@javaops.ru>
+Date:   Thu Apr 23 14:05:13 2020 +0300
+
+    Update ReleaseNotes.md
+
+[33mcommit 80a3c742a574cfaf871982aeedb95fcd62722f66[m
+Author: Java Online Projects <admin@javaops.ru>
+Date:   Thu Mar 26 16:02:15 2020 +0300
+
+    Update cv.md
+
+[33mcommit 796d81b362a3e087d016e90e503fe208eb55740b[m
+Author: Java Online Projects <admin@javaops.ru>
+Date:   Thu Mar 5 23:56:35 2020 +0300
+
+    Update README.md
+
+[33mcommit 572d0459e0c109ad051119757ef65d11b70f6302[m
+Author: Java Online Projects <admin@javaops.ru>
+Date:   Tue Feb 18 11:51:18 2020 +0300
+
+    Update README.md
+
+[33mcommit 62e31a0f6fa449c1ae260f216bfb261fd32827a1[m
+Author: admin@javaops.ru <gitlaB13>
+Date:   Mon Feb 17 23:57:02 2020 +0300
+
+    Update topjava
+
+[33mcommit c145d7d3bcfec7aaecaadb47ec842dd37325902b[m
+Author: Grigory Kislin <javawebinar@yandex.ru>
+Date:   Wed Aug 26 02:11:54 2015 +0300
+
+    Initial
