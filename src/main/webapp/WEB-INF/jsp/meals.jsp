@@ -4,36 +4,38 @@
 <%@ taglib prefix="fn" uri="http://topjava.javawebinar.ru/functions" %>
 <html>
 <head>
+    <jsp:include page="fragments/headTag.jsp"/>
     <title>Meals</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<jsp:include page="fragments/bodyHeader.jsp"/>
 <section>
-    <h3><a href="index.jsp">Home</a></h3>
+    <h3><a href="${pageContext.request.contextPath}">Home</a></h3>
     <hr/>
     <h2>Meals</h2>
-    <form method="get" action="meals">
+    <form method="post" action="meals/filter">
         <input type="hidden" name="action" value="filter">
         <dl>
             <dt>From Date (inclusive):</dt>
-            <dd><input type="date" name="startDate" value="${param.startDate}"></dd>
+            <dd><input type="date" name="startDate"></dd>
         </dl>
         <dl>
             <dt>To Date (inclusive):</dt>
-            <dd><input type="date" name="endDate" value="${param.endDate}"></dd>
+            <dd><input type="date" name="endDate"></dd>
         </dl>
         <dl>
             <dt>From Time (inclusive):</dt>
-            <dd><input type="time" name="startTime" value="${param.startTime}"></dd>
+            <dd><input type="time" name="startTime"></dd>
         </dl>
         <dl>
             <dt>To Time (exclusive):</dt>
-            <dd><input type="time" name="endTime" value="${param.endTime}"></dd>
+            <dd><input type="time" name="endTime"></dd>
         </dl>
         <button type="submit">Filter</button>
     </form>
     <hr/>
-    <a href="meals?action=create">Add Meal</a>
+    <a href="meals/create">Add Meal</a>
     <br><br>
     <table border="1" cellpadding="8" cellspacing="0">
         <thead>
@@ -56,11 +58,12 @@
                 </td>
                 <td>${meal.description}</td>
                 <td>${meal.calories}</td>
-                <td><a href="meals?action=update&id=${meal.id}">Update</a></td>
-                <td><a href="meals?action=delete&id=${meal.id}">Delete</a></td>
+                <td><a href="meals/update?id=${meal.id}">Update</a></td>
+                <td><a href="meals/delete?id=${meal.id}">Delete</a></td>
             </tr>
         </c:forEach>
     </table>
 </section>
+<jsp:include page="fragments/footer.jsp"/>
 </body>
 </html>

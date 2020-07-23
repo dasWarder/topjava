@@ -10,10 +10,4 @@ import static ru.javawebinar.topjava.Profiles.JDBC;
 @ActiveProfiles(JDBC)
 public class JdbcMealServiceTest extends AbstractMealServiceTest {
 
-    @Ignore
-    @Test
-    @Override
-    public void createWithException() throws Exception {
-        super.createWithException();
-    }
 }
