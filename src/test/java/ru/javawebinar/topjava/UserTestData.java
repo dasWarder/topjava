@@ -28,4 +28,5 @@ public class UserTestData {
         updated.setCaloriesPerDay(330);
         return updated;
     }
+
 }
